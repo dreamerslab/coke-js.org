@@ -1,6 +1,8 @@
 <% content_for :head do %>
   <title>Coke - node.js MVC</title>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "prettify" %>
+  <%= stylesheet_link_tag "desert" %>
 <% end %>
 <!-- <div id="original"></div> -->
 <div id="header">
@@ -9,7 +11,7 @@
   </header>
   <nav>
     <ul>
-      <li class="nav-item"><a href="#" id="nav-active" class="nav-link" herf="#">Home</a></li>
+      <li class="nav-item"><a href="#" id="nav-selected" class="nav-link" herf="#">Home</a></li>
       <li class="nav-item"><a href="#" class="nav-link" herf="#">Demos</a></li>
       <li class="nav-item"><a href="#" class="nav-link" herf="#">Docs</a></li>
       <li class="nav-item"><a href="#" class="nav-link" herf="#">Forum</a></li>
@@ -17,7 +19,7 @@
     </ul>
   </nav>
 </div> <!-- #header -->
-<h2>&ldquo;COKE is a lightweight <a href="#" id="nodejs-link">node.js</a> MVC framework that speeds up your web development. It's simple, it's modulized, it's somking fast!&rdquo;</h2>
+<h2 id="desc">&ldquo;COKE is a lightweight <a href="#" id="nodejs-link">node.js</a> MVC framework that speeds up your web development. It's simple, it's modulized, it's somking fast!&rdquo;</h2>
 <div id="sample-code-bg">
   <div id="sample-code">
     <div class="code-comment"># Quick start</div>
@@ -49,4 +51,5 @@
     <p class="intro-content">COKE is still in its early stage and needs your help to extend its functionality and increase its stability. The source code is hosted on <a class="intro-link" href="#" target="_blank">Github</a>, you can help us by sending us pull requests, feedback bug reports or translate this project into your language.</p>
   </div>
 </div> <!-- #intro-wrap -->
-<footer>Powered by <a href="#" id="code-sublogo">Coke</a> | Sponsored by <a href="#" id="dreamerslab">DreamersLab</a></footer>
+<footer>Powered by <a href="#" id="sublogo">Coke</a> | Sponsored by <a href="#" id="dreamerslab">DreamersLab</a></footer>
+<%= javascript_include_tag 'prettify' %>

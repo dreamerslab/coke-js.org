@@ -4,22 +4,9 @@
 @import "lib"
 
 $page-width: 960px
-$body-font: 'Merriweather', serif
-$link-font: 'Kefa'
-$code-font: Lucida Grande
-
-body
-  font-family: $body-font
-
-a, img
-  +inline-block
-  vertical-align: top
-
-a
-  text-decoration: none
-
-ul
-  +clearfix
+$body-font: Kefa, Merriweather, serif
+$footer-font: Georgia
+$code-font: "Lucida Grande"
 
 #original
   background: url("/img/original.png") no-repeat center top
@@ -35,6 +22,7 @@ ul
 
 #logo
   @include bg_text( 200px, 120px, "logo")
+  +inline-block
 
 #header
   +clearfix
@@ -46,16 +34,19 @@ header
 
 nav
   +float-right
-  padding: 85px 0 0
+  padding: 89px 0 0
 
 .nav-item
-  display: inline-block
-  vertical-align: top
+  +inline-block
   padding: 0 0 0 6px
 
 .nav-link
+  +inline-block
+  vertical-align: top
+  text-decoration: none
   color: #000
-  font-size: 19px
+  font-size: 20px
+  font-family: $body-font
   padding: 5px 8px
   font-weight: bold
 
@@ -63,37 +54,41 @@ nav
   background: #000
   color: #fff
 
-#nav-active
+#nav-selected
   background: #000
   color: #fff
 
-h2
+#desc
   @include center( $page-width - 160px)
   clear: both
   color: #666
   font-size: 22px
-  font-family: "Kefa"
+  font-family: $body-font
   text-align: center
   padding: 51px 80px 54px
   line-height: 38px
 
-#sample-code-bg
-  background: url("/img/code-bg.png") repeat-x
-  height: 300px
-
-#sample-code
-  @include center( $page-width )
-  padding: 23px 0
-
 #nodejs-link
+  +inline-block
+  vertical-align: top
+  text-decoration: none
   color: #333
   background: url("/img/h2-link-bg.png") repeat-x center 27px
-  font-family: $link-font
+  font-family: $body-font
   font-weight: bold
   text-decoration: none
 
 #nodejs-link:hover
   color: #000
+
+#sample-code-bg
+  background: url("/img/code-bg-35.png") repeat-x
+  height: 300px
+
+#sample-code
+  @include center( $page-width )
+  position: relative
+  padding: 23px 0
 
 .code-comment ,.code
   padding: 0 0 0 119px
@@ -120,11 +115,13 @@ h2
   color: #ecc571
 
 #current-version
-  +float-right
+  position: absolute
+  bottom: -10px
+  right: -9px
   color: #000
-  font-size: 15px
+  font-family: $body-font
+  font-size: 16px
   text-shadow: 0px 1px #929292
-  padding: 19px 0 0
 
 .intro-wrap
   @include center( $page-width )
@@ -141,17 +138,20 @@ h2
   padding: 0
 
 .intro-title
-  font-family: $link-font
+  font-family: $body-font
   font-size: 24px
   font-weight: bold
   padding: 0 0 30px
 
 .intro-content
-  font-family: $link-font
+  font-family: $body-font
   font-size: 16px
   line-height: 29px
 
 .intro-link
+  +inline-block
+  vertical-align: top
+  text-decoration: none
   background: url("/img/intro-link-bg.png") repeat-x center 22px
   color: #333
   font-weight: bold
@@ -162,16 +162,20 @@ h2
 footer
   color: #999
   font-size: 14px
-  font-family: Georgia
+  font-family: $footer-font
   text-align: center
   padding: 0 0 50px
   letter-spacing: 1px
 
-#code-sublogo
+#sublogo
   @include bg_text( 54px, 25px, "logo-s")
+  +inline-block
+  text-decoration: none
   margin: -4px 4px 0 0
 
 #dreamerslab
+  +inline-block
+  text-decoration: none
   background: url("/img/dreamerslab.png") no-repeat top left
   padding: 0 0 3px 16px
   color: #333
