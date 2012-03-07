@@ -86,37 +86,21 @@ nav
   height: 300px
 
 #sample-code
-  @include center( $page-width )
+  @include center( $page-width - 85px*2 )
   position: relative
-  padding: 23px 0
+  padding: 9px 85px 0
+  height: 291px
 
-.code-comment ,.code
-  padding: 0 0 0 119px
-  font-size: 16px
-
-.code-comment
-  color: #c6c6c6
-  font-style: italic
+pre.prettyprint
+  border: none
   font-family: $code-font
-  line-height: 18px
 
-.code
-  color: #fff
-  font-family: $code-font
-  line-height: 19px
-
-.code-space
-  height: 21px
-
-.code-and
-  color: #ee9e71
-
-.code-cd
-  color: #ecc571
+pre
+  background-color: transparent
 
 #current-version
   position: absolute
-  bottom: -10px
+  bottom: 11px
   right: -9px
   color: #000
   font-family: $body-font

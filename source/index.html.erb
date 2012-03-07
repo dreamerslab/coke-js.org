@@ -22,18 +22,23 @@
 <h2 id="desc">&ldquo;COKE is a lightweight <a href="#" id="nodejs-link">node.js</a> MVC framework that speeds up your web development. It's simple, it's modulized, it's somking fast!&rdquo;</h2>
 <div id="sample-code-bg">
   <div id="sample-code">
-    <div class="code-comment"># Quick start</div>
-    <div class="code-comment"># Make sure you have installed node.js, mongoDB and npm before you run the folling commands</div>
-    <div class="code-space"></div>
-    <div class="code">$ npm install coke -g</div>
-    <div class="code">$ coke new blog <span class="code-and">&&</span> <span class="code-cd">cd</span> blog</div>
-    <div class="code">$ coke g scaffold posts title:string content:string</div>
-    <div class="code-space"></div>
-    <div class="code-comment"># Make sure your mongoDB is running</div>
-    <div class="code-space"></div>
-    <div class="code">$ coke s</div>
-    <div class="code-space"></div>
-    <div class="code-comment"># Now go check at http://127.0.0.1:4000 on your favorite browser to see your first coke project</div>
+    <pre class="prettyprint">
+      <code>
+      # Quick start
+      # Make sure you have installed node.js, mongoDB and npm before you run the folling commands
+
+      $ npm install coke -g
+      $ coke new blog && cd blog
+      $ coke g scaffold posts title:string content:string
+
+      # Make sure your mongoDB is running
+
+      $ coke s
+
+
+      # Now go check at http://127.0.0.1:4000 on your favorite browser to see your first coke project
+    </code>
+    </pre>
     <div id="current-version"># Current verson: 0.3.8</div>
   </div> <!-- #sample-code -->
 </div> <!-- #sample-code-bg -->
@@ -52,4 +57,3 @@
   </div>
 </div> <!-- #intro-wrap -->
 <footer>Powered by <a href="#" id="sublogo">Coke</a> | Sponsored by <a href="#" id="dreamerslab">DreamersLab</a></footer>
-<%= javascript_include_tag 'prettify' %>
