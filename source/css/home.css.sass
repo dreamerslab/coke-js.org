@@ -1,11 +1,5 @@
-@import "compass"
-@import "compass/reset"
-// You must put a png file in /img/sprite, or the compass won't generate css file, because it can't fint any png to sprite
-@import "lib"
+@import "common"
 
-$page-width: 960px
-$body-font: Kefa, Merriweather, serif
-$footer-font: Georgia
 $code-font: "Lucida Grande"
 
 #original
@@ -19,44 +13,6 @@ $code-font: "Lucida Grande"
   margin: 0 0 0 -630px
   opacity: 0.3
   z-index: 9999
-
-#logo
-  @include bg_text( 200px, 120px, "logo")
-  +inline-block
-
-#header
-  +clearfix
-  @include center( $page-width )
-  padding: 15px 0 4px
-
-header
-  +float-left
-
-nav
-  +float-right
-  padding: 89px 0 0
-
-.nav-item
-  +inline-block
-  padding: 0 0 0 6px
-
-.nav-link
-  +inline-block
-  vertical-align: top
-  text-decoration: none
-  color: #000
-  font-size: 20px
-  font-family: $body-font
-  padding: 5px 8px
-  font-weight: bold
-
-.nav-link:hover
-  background: #000
-  color: #fff
-
-#nav-selected
-  background: #000
-  color: #fff
 
 #desc
   @include center( $page-width - 160px)
@@ -142,26 +98,3 @@ pre
 
 .intro-link:hover
   color: #000
-
-footer
-  color: #999
-  font-size: 14px
-  font-family: $footer-font
-  text-align: center
-  padding: 0 0 50px
-  letter-spacing: 1px
-
-#sublogo
-  @include bg_text( 54px, 25px, "logo-s")
-  +inline-block
-  text-decoration: none
-  margin: -4px 4px 0 0
-
-#dreamerslab
-  +inline-block
-  text-decoration: none
-  background: url("/img/dreamerslab.png") no-repeat top left
-  padding: 0 0 3px 16px
-  color: #333
-  text-decoration: underline
-  font-weight: bold

@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <%= yield_content :head %>
-    <%= stylesheet_link_tag "screen.css" %>
   </head>
   <body onload="prettyPrint()">
+    <%= partial "header" %>
     <%= yield %>
+    <%= partial "footer" %>
     <%= javascript_include_tag 'prettify' %>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
