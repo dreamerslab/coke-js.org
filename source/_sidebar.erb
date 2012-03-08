@@ -1,0 +1,40 @@
+<div class="span3">
+  <ul class="thumbnails">
+    <li class="span3">
+      <div class="thumbnail sidebar-block">
+        <div class="caption">
+          <h4 class="sidebar-title">All Tags</h4>
+          <p class="sidebar-content">
+            <% 10.times do %>
+            <a href="#" class="all-tag-item tag"><%= lorem.word %></a>
+            <% end %>
+          </p>
+          <p class="sidebar-link-p"><a href="#" id="all-tag-link" class="btn btn-primary btn-mini">All Tags</a></p>
+        </div>
+      </div> <!-- .thumbnail -->
+      <div class="thumbnail sidebar-block">
+        <div class="caption">
+          <h4 class="sidebar-title">Active Users</h4>
+          <p class="sidebar-content">
+            <% 10.times do %>
+            <a href="#" class="user"><img class="avatar" src="<%= lorem.image('15x15') %>" alt="Avatar"><%= lorem.name %></a>
+            <% end %>
+          </p>
+          <p class="sidebar-link-p"><a href="#" id="all-tag-link" class="btn btn-primary btn-mini">All Users</a></p>
+        </div>
+      </div> <!-- .thumbnail -->
+      <div class="thumbnail sidebar-block">
+        <div class="caption">
+          <h4 class="sidebar-title">Issues</h4>
+          <p class="sidebar-content">
+            <% 5.times do %>
+            <h4><a href="#" class="issue-title-link">Title</a></h4>
+            <p><%= lorem.words 3%></p>
+            <% end %>
+          </p>
+          <p class="sidebar-link-p"><a href="#" id="all-tag-link" class="btn btn-primary btn-mini">All Issues</a></p>
+        </div>
+      </div> <!-- .thumbnail -->
+    </li>
+  </ul>
+</div>
