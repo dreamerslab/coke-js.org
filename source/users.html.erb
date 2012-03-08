@@ -1,0 +1,31 @@
+<% content_for :head do %>
+  <title>Coke - Latest</title>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "users" %>
+  <%= stylesheet_link_tag "bootstrap" %>
+<% end %>
+
+<div class="container">
+  <h2>All Users</h2>
+  <div id="users-wrap">
+    <ul class="thumbnails">
+      <% 15.times do %>
+      <li class="span4">
+        <div class="thumbnail user-wrap">
+          <div class="avatar-user-warp" >
+            <img class="avatar" src="http://placehold.it/80x80" alt="Avatar">
+            <h3 class="user-name"><%= lorem.name %></h3>
+          </div>
+          <p>Since: <%= lorem.date %></p>
+          <p>Posts: 108 posts</p>
+          <p>Bio: <%= lorem.words 30 %></p>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<% content_for :script do %>
+  <%= javascript_include_tag "bootstrap" %>
+<% end %>
