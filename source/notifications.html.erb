@@ -1,0 +1,43 @@
+<% content_for :head do %>
+  <title>Coke - Latest</title>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "notifications" %>
+  <%= stylesheet_link_tag "bootstrap" %>
+<% end %>
+
+<div class="container">
+  <%= partial "profile-panel" %>
+  <div class="row">
+    <div class="span9">
+      <% 10.times do %>
+      <div class="notify-item">
+        <a class="close">&times;</a>
+        <p>
+          <a href="#" class="author" ><%= lorem.name %></a> comment on <a href="#" class="article-link">Post Title</a> <span class="last-reply-time">49mins ago</span>
+        </p>
+        <a href="#" class="notify-user-avatar"><img class="profile-avatar-photo" src="<%= lorem.image('32x32') %>" alt="Avatar"></a>
+        <p class="notify-comment"><%= lorem.name %>'s comment...</p>
+      </div> <!-- .article-item -->
+      <% end %>
+      <div class="pagination article-pager">
+        <ul>
+          <li><a href="#">Prev</a></li>
+          <li class="active">
+            <a href="#">1</a>
+          </li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+      </div>
+    </div> <!-- .span9 -->
+    <%= partial "sidebar" %>
+  </div>
+</div>
+
+
+
+<% content_for :script do %>
+  <%= javascript_include_tag "bootstrap" %>
+<% end %>
