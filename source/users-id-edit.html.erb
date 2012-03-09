@@ -1,0 +1,44 @@
+<% content_for :head do %>
+  <title>Coke - Edit Your Profile</title>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "users-id-edit" %>
+  <%= stylesheet_link_tag "bootstrap" %>
+<% end %>
+
+<div id="profile-container" class="container">
+  <div class="row">
+    <div class="span6 offset3">
+      <!-- <h2>Edit Your Profile</h2> -->
+      <ul class="thumbnails">
+        <li class="span6 well">
+          <div id="user-profile-wrap">
+            <!-- <div class="avatar-user-warp" >
+              <img class="avatar" src="http://placehold.it/120x120" alt="Avatar">
+              <h3 class="user-name"><%= lorem.name %></h3>
+            </div> -->
+            <form class="form-horizontal">
+              <fieldset>
+                <legend>Edit Profile</legend>
+                <div class="control-group">
+                  <label class="control-label" for="input01">Your New Bio</label>
+                  <div class="controls">
+                    <textarea class="input-xlarge new-bio" id="input01"></textarea>
+                    <p class="help-block">Please limit your bio to 30 words</p>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+                  <button class="btn">Cancel</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </li>
+      </ul> <!-- .thumbnails -->
+    </div> <!-- .span6 .offset3 -->
+  </div> <!-- .row -->
+</div>
+
+<% content_for :script do %>
+  <%= javascript_include_tag "bootstrap" %>
+<% end %>
