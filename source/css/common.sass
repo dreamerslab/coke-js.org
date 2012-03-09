@@ -5,8 +5,12 @@
 @import "common/header"
 @import "common/footer"
 
+#search-input
+  width: 124px
+
 #search
   +float-right
+  padding: 3px 0 0
 
 #new-post
   +float-right
@@ -21,33 +25,13 @@
   text-decoration: none
 
 #current-user-wrap
-  +float-left
+  +float-right
 
 #profile-avatar
   +float-right
 
 #user-notify-wrap
   +float-left
-
-.article-nav-list
-  border-bottom: 1px solid #ddd
-  margin-left: 0
-  margin-bottom: 18px
-  list-style: none
-
-.article-nav-item
-  display: inline
-
-.article-nav-link
-  +inline-block
-  border: 1px solid transparent
-  padding: 9px 12px
-  margin-right: 2px
-  line-height: 14px
-
-.article-nav-link:hover
-  text-decoration: none
-  background: #ddd
 
 #log-out
   +float-right
@@ -58,6 +42,9 @@
 
 #profile-avatar-photo
   padding: 0 0 0 5px
+
+.crumb-link:hover
+  text-decoration: none
 
 .avatar
   padding: 0 5px 0 0

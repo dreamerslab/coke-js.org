@@ -1,12 +1,18 @@
 <div class="span3">
   <ul class="thumbnails">
+    <div class="span3">
+      <form id="search" class="form-search">
+        <input type="text" id="search-input" class="input-small search-query">
+        <button type="submit" class="btn">Search</button>
+      </form>
+    </div>
     <li class="span3">
       <div class="thumbnail sidebar-block">
         <div class="caption">
           <h4 class="sidebar-title">All Tags</h4>
           <p class="sidebar-content">
             <% 10.times do %>
-            <a href="#" class="all-tag-item tag"><%= lorem.word %></a>
+            <a href="/posts-tag-name.html" class="all-tag-item tag"><%= lorem.word %></a>
             <% end %>
           </p>
           <p class="sidebar-link-p"><a href="#" id="all-tag-link" class="btn btn-primary btn-mini">All Tags</a></p>

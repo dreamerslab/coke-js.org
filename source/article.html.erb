@@ -10,19 +10,10 @@
   <%= partial "profile-panel" %>
   <div class="row">
     <div class="span9">
-      <ul class="breadcrumb">
-        <li>
-          <a class="crumb-link" href="/posts.html">Forum</a> <span class="divider">/</span>
-        </li>
-        <li>
-          <a class="crumb-link" href="/posts/tag?name=xxx">Tag</a> <span class="divider">/</span>
-        </li>
-        <li class="active">
-          <a class="crumb-link" href="/article.html">Post Title</a>
-        </li>
-      </ul>
+      <%= partial "breadcrumb" %>
       <div id="article-wrap">
-        <a class="reply btn btn-primary" href="#reply" class="btn btn-primary">Reply</a>
+        <a class="reply btn btn-primary" href="#reply-area">Reply</a>
+        <a class="edit btn btn-info" href="/posts-id-edit.html">Edit</a>
         <h2 id="article-title" >Post Title</h2>
         <% 3.times do %>
         <p><%= lorem.paragraph %></p>
@@ -46,6 +37,9 @@
         </pre>
         <a href="/posts/:id" id="author"><%= lorem.name %></a>
         <span class="last-reply-time"><%= lorem.date %></span>
+        <% 4.times do %>
+        <a href="#" class="tag"><%= lorem.word %></a>
+        <% end %>
       </div> <!-- #article-wrap -->
       <div class="comment-wrap">
         <h2 id="article-title" >Comment Title</h2>
@@ -71,7 +65,7 @@
         </pre>
         <a href="/posts/:id" id="author"><%= lorem.name %></a>
         <span class="last-reply-time"><%= lorem.date %></span>
-        <a class="reply btn btn-primary" href="#reply" class="btn btn-primary">Reply</a>
+        <a class="reply btn btn-primary" href="#reply-area" class="btn btn-primary">Reply</a>
       </div> <!-- .comment-wrap -->
       <div class="pagination article-pager">
         <ul>
@@ -93,16 +87,14 @@
               <textarea class="input-xlarge" id="textarea" rows="10"></textarea>
             </div>
           </div>
-          <div class="form-actions reply-actions">
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button class="btn">Cancel</button>
-          </div>
+          <%= partial "form-actions" %>
         </fieldset>
       </form>
     </div> <!-- .span9 -->
     <%= partial "sidebar" %>
   </div> <!-- .row -->
 </div>
+
 <% content_for :script do %>
   <%= javascript_include_tag "bootstrap" %>
 <% end %>

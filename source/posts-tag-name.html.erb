@@ -1,7 +1,7 @@
 <% content_for :head do %>
-  <title>Coke - Latest</title>
+  <title>Coke - Tag <%= lorem.word %></title>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag "posts" %>
+  <%= stylesheet_link_tag "posts-tag-name" %>
   <%= stylesheet_link_tag "bootstrap" %>
 <% end %>
 
@@ -9,6 +9,7 @@
   <%= partial "profile-panel" %>
   <div class="row">
     <div class="span9">
+      <h2 id="page-title">All Posts About <%= lorem.word %></h2>
       <a id="new-post" class="btn btn-primary" href="/posts-new.html">New Post</a>
       <ul class="article-nav-list">
         <li class="article-nav-item"><a id="article-nav-selected" class="article-nav-link" href="#latest">Latest</a></li>
