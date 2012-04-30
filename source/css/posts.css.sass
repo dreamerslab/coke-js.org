@@ -15,19 +15,20 @@ $code-font: "Lucida Grande"
   text-decoration: none
 
 .article-nav-list
+  +clearfix
   border-bottom: 1px solid #ddd
   margin-left: 0
   margin-bottom: 18px
   list-style: none
 
 .article-nav-item
-  display: inline
+  +float-left
+  padding: 0 2px 0 0
 
 .article-nav-link
   +inline-block
   border: 1px solid transparent
-  padding: 9px 12px
-  margin-right: 2px
+  padding: 7px 11px
   line-height: 14px
 
 .article-nav-link:hover
