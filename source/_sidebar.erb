@@ -8,6 +8,21 @@
     </div>
     <li class="span3">
       <div class="thumbnail sidebar-block">
+        <div class="caption side-profile">
+          <div id="current-user-wrap">
+            <div id="profile-avatar"><img id="profile-avatar-photo" src="<%= lorem.image('50x50') %>" alt="Avatar"></div>
+            <div id="user-notify-wrap">
+              <a id="current-profile-link" href="/users-id-edit.html" id="current-user"><%= lorem.name %></a>
+              <div id="notify">
+                <i id="profile-comment" class="icon-exclamation-sign"></i>
+                <a id="notify-link" href="/notifications.html">12</a>
+                <a href="#" id="log-out" class="btn btn-inverse btn-mini">Log out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- .thumbnail -->
+      <div class="thumbnail sidebar-block">
         <div class="caption">
           <h4 class="sidebar-title">All Tags</h4>
           <p class="sidebar-content">
@@ -15,7 +30,7 @@
             <a href="/posts-tag-name.html" class="all-tag-item tag"><%= lorem.word %></a>
             <% end %>
           </p>
-          <p class="sidebar-link-p"><a href="#" id="all-tag-link" class="btn btn-primary btn-mini">All Tags</a></p>
+          <p class="sidebar-link-p"><a href="#" class="btn btn-inverse btn-mini sidebar-link">All Tags</a></p>
         </div>
       </div> <!-- .thumbnail -->
       <div class="thumbnail sidebar-block">
@@ -26,7 +41,7 @@
             <a href="#" class="user"><img class="avatar" src="<%= lorem.image('15x15') %>" alt="Avatar"><%= lorem.name %></a>
             <% end %>
           </p>
-          <p class="sidebar-link-p"><a href="/users.html" id="all-tag-link" class="btn btn-primary btn-mini">All Users</a></p>
+          <p class="sidebar-link-p"><a href="/users.html" class="btn btn-inverse btn-mini sidebar-link">All Users</a></p>
         </div>
       </div> <!-- .thumbnail -->
       <div class="thumbnail sidebar-block">
@@ -38,7 +53,7 @@
             <p><%= lorem.words 3%></p>
             <% end %>
           </p>
-          <p class="sidebar-link-p"><a href="#" id="all-tag-link" class="btn btn-primary btn-mini">All Issues</a></p>
+          <p class="sidebar-link-p"><a href="#" class="btn btn-inverse btn-mini sidebar-link">All Issues</a></p>
         </div>
       </div> <!-- .thumbnail -->
     </li>

@@ -5,8 +5,10 @@
 @import "common/header"
 @import "common/footer"
 
+$profile-width: 135px
+
 #search-input
-  width: 124px
+  width: 122px
 
 #search
   +float-right
@@ -15,33 +17,50 @@
 #new-post
   +float-right
 
+#current-profile-link
+  display: block
+  width: $profile-width
+  line-height: 17px
+  &:hover
+    text-decoration: none
+
 #current-user:hover
   text-decoration: none
 
 #notify
-  text-align: right
+  text-align: left
+  width: $profile-width
+  position: absolute
+  bottom: 0
+  left: 0
 
 #notify-link:hover
   text-decoration: none
 
 #current-user-wrap
-  +float-right
+  +float-left
 
 #profile-avatar
-  +float-right
+  +float-left
 
 #user-notify-wrap
   +float-left
+  height: 50px
+  position: relative
 
 #log-out
   +float-right
-  margin: 0 0 0 6px
+  position: relative
+  top: -2px
+
+.side-profile
+  +clearfix
 
 .profile
   padding: 4px 0 0
 
 #profile-avatar-photo
-  padding: 0 0 0 5px
+  padding: 0 5px 0 0
 
 .crumb-link:hover
   text-decoration: none
@@ -80,7 +99,7 @@
 .all-tag-item
   margin-bottom: 5px
 
-#all-tag-link
+.sidebar-link
   +float-right
 
 .sidebar-link-p
