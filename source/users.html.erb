@@ -5,28 +5,24 @@
   <%= stylesheet_link_tag "bootstrap" %>
 <% end %>
 
-<div class="container">
-  <div class="row">
-    <div class="span12">
-      <h2>All Users</h2>
-      <div id="users-wrap">
-        <ul class="thumbnails">
-          <% 15.times do %>
-          <li class="span4">
-            <div class="thumbnail user-wrap">
-              <div class="avatar-user-warp" >
-                <img class="avatar" src="http://placehold.it/80x80" alt="Avatar">
-                <h3 class="user-name"><%= lorem.name %></h3>
-              </div>
-              <p>Since: <%= lorem.date %></p>
-              <p>Posts: 108 posts</p>
-              <p>Bio: <%= lorem.words 30 %></p>
-            </div>
-          </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
+<div class="span12">
+  <h2>All Users</h2>
+  <div id="users-wrap">
+    <ul class="thumbnails">
+      <% 15.times do %>
+      <li class="span4">
+        <div class="thumbnail user-wrap">
+          <div class="avatar-user-warp" >
+            <img class="avatar" src="http://placehold.it/80x80" alt="Avatar">
+            <h3 class="user-name"><%= lorem.name %></h3>
+          </div>
+          <p>Since: <%= lorem.date %></p>
+          <p>Posts: 108 posts</p>
+          <p>Bio: <%= lorem.words 30 %></p>
+        </div>
+      </li>
+      <% end %>
+    </ul>
   </div>
 </div>
 

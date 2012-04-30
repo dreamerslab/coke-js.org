@@ -5,47 +5,43 @@
   <%= stylesheet_link_tag "bootstrap" %>
 <% end %>
 
-<div class="container">
-  <div class="row">
-    <div class="span9">
-      <h2 id="page-title">All Posts About <%= lorem.word %></h2>
-      <a id="new-post" class="btn btn-primary" href="/posts-new.html">New Post</a>
-      <ul class="article-nav-list">
-        <li class="article-nav-item"><a id="article-nav-selected" class="article-nav-link" href="#latest">Latest</a></li>
-        <li class="article-nav-item"><a class="article-nav-link" href="/posts/hot">Hot</a></li>
-        <li class="article-nav-item"><a class="article-nav-link" href="/posts/unsolved">Unsolved</a></li>
-      </ul>
-      <div class="tab-content">
-        <div class="tab-pane active" id="latest">
-          <% 10.times do %>
-          <div class="article-item">
-            <h3 class="item-title"><a class="title-link" href="/article.html">Title</a></h3>
-            <p class="item-content"><%= lorem.sentence %></p>
-            <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
-            <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
-            <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
-            <a href="/posts/:id" class="author"><%= lorem.name %></a>
-            <span class="last-reply-time">49mins ago</span>
-          </div> <!-- .article-item -->
-          <% end %>
-          <div class="pagination article-pager">
-            <ul>
-              <li><a href="#">Prev</a></li>
-              <li class="active">
-                <a href="#">1</a>
-              </li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </div>
-        </div>
+<div class="span9">
+  <h2 id="page-title">All Posts About <%= lorem.word %></h2>
+  <a id="new-post" class="btn btn-primary" href="/posts-new.html">New Post</a>
+  <ul class="article-nav-list">
+    <li class="article-nav-item"><a id="article-nav-selected" class="article-nav-link" href="#latest">Latest</a></li>
+    <li class="article-nav-item"><a class="article-nav-link" href="/posts/hot">Hot</a></li>
+    <li class="article-nav-item"><a class="article-nav-link" href="/posts/unsolved">Unsolved</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="latest">
+      <% 10.times do %>
+      <div class="article-item">
+        <h3 class="item-title"><a class="title-link" href="/article.html">Title</a></h3>
+        <p class="item-content"><%= lorem.sentence %></p>
+        <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+        <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+        <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+        <a href="/posts/:id" class="author"><%= lorem.name %></a>
+        <span class="last-reply-time">49mins ago</span>
+      </div> <!-- .article-item -->
+      <% end %>
+      <div class="pagination article-pager">
+        <ul>
+          <li><a href="#">Prev</a></li>
+          <li class="active">
+            <a href="#">1</a>
+          </li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
       </div>
-    </div> <!-- .span9 -->
-    <%= partial "sidebar" %>
+    </div>
   </div>
-</div>
+</div> <!-- .span9 -->
+<%= partial "sidebar" %>
 
 <% content_for :script do %>
   <%= javascript_include_tag "bootstrap" %>

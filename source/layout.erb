@@ -24,7 +24,11 @@
       </nav>
     </div> <!-- #header -->
 
-    <%= yield %>
+    <div id="content-wrap" class="container">
+      <div class="row">
+        <%= yield %>
+      </div> <!-- .row -->
+    </div>
 
     <footer>
       Powered by <a href="#" id="sublogo">Coke</a> | Sponsored by <a href="#" id="dreamerslab">DreamersLab</a>
