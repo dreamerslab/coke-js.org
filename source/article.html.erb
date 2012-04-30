@@ -14,38 +14,10 @@
     <a class="edit btn btn-info" href="/posts-id-edit.html">Edit</a>
     <h2 id="article-title" >Post Title</h2>
     <% 3.times do %>
-    <p><%= lorem.paragraph %></p>
+    <p class="content-p"><%= lorem.paragraph %></p>
     <% end %>
     <pre class="prettyprint">
-    <code>
-  # Quick start
-  # Make sure you have installed node.js, mongoDB and npm before you run the folling commands
-
-  $ npm install coke -g
-  $ coke new blog && cd blog
-  $ coke g scaffold posts title:string content:string
-
-  # Make sure your mongoDB is running
-
-  $ coke s
-
-
-  # Now go check at http://127.0.0.1:4000 on your favorite browser to see your first coke project
-          </code>
-        </pre>
-        <a href="/posts/:id" id="author"><%= lorem.name %></a>
-        <span class="last-reply-time"><%= lorem.date %></span>
-        <% 4.times do %>
-        <a href="#" class="tag"><%= lorem.word %></a>
-        <% end %>
-      </div> <!-- #article-wrap -->
-      <div class="comment-wrap">
-        <h2 id="article-title" >Comment Title</h2>
-        <% 2.times do %>
-        <p><%= lorem.paragraph %></p>
-        <% end %>
-        <pre class="prettyprint">
-        <code>
+      <code>
   # Quick start
   # Make sure you have installed node.js, mongoDB and npm before you run the folling commands
 
@@ -61,10 +33,43 @@
   # Now go check at http://127.0.0.1:4000 on your favorite browser to see your first coke project
       </code>
     </pre>
-    <a href="/posts/:id" id="author"><%= lorem.name %></a>
-    <span class="last-reply-time"><%= lorem.date %></span>
-    <a class="reply btn btn-primary" href="#reply-area" class="btn btn-primary">Reply</a>
+    <div class="meta-wrap">
+      <a href="/posts/:id" id="article-author"><%= lorem.name %></a>
+      <span class="last-reply-time"><%= lorem.date %></span>
+      <% 4.times do %>
+      <a href="#" class="tag"><%= lorem.word %></a>
+      <% end %>
+    </div>
+  </div> <!-- #article-wrap -->
+  <% 2.times do %>
+  <div class="comment-wrap">
+    <% 2.times do %>
+    <p class="content-p"><%= lorem.paragraph %></p>
+    <% end %>
+    <pre class="prettyprint">
+      <code>
+  # Quick start
+  # Make sure you have installed node.js, mongoDB and npm before you run the folling commands
+
+  $ npm install coke -g
+  $ coke new blog && cd blog
+  $ coke g scaffold posts title:string content:string
+
+  # Make sure your mongoDB is running
+
+  $ coke s
+
+
+  # Now go check at http://127.0.0.1:4000 on your favorite browser to see your first coke project
+      </code>
+    </pre>
+    <div class="meta-wrap">
+      <a href="/posts/:id" class="comment-author"><%= lorem.name %></a>
+      <span class="last-reply-time"><%= lorem.date %></span>
+      <a class="comment-reply btn btn-primary" href="#reply-area" class="btn btn-primary">Reply</a>
+    </div>
   </div> <!-- .comment-wrap -->
+  <% end %>
   <div class="pagination article-pager">
     <ul>
       <li><a href="#">Prev</a></li>
