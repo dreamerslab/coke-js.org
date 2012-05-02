@@ -1,5 +1,5 @@
 <% content_for :head do %>
-  <title>Coke - Edit Your Profile</title>
+  <title>Coke - Profile</title>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "user" %>
   <%= stylesheet_link_tag "bootstrap" %>
@@ -21,6 +21,7 @@
       <a class="comment-count" href="/article.html#comment">10</a>
     </div> <!-- .article-item -->
     <% end %>
+    <a class="more-link" href="/user-posts.html">more &#187</a>
   </div> <!-- #recent-posts-wrap -->
 
   <div id="replies">
@@ -38,7 +39,22 @@
       <a class="comment-count" href="/article.html#comment">10</a>
     </div> <!-- .article-item -->
     <% end %>
+    <a class="more-link" href="/user-comments.html">more &#187</a>
   </div> <!-- #recent-reply-wrap -->
+
+  <form id="reply-area">
+    <fieldset>
+      <h2>Your New Bio</h2>
+      <div id="bio-notes">Please limit your bio to 140 characters</div>
+      <!-- <legend>Your New Bio</legend> -->
+      <div class="control-group">
+        <div class="controls">
+          <textarea class="input-xlarge" id="textarea" rows="10"></textarea>
+        </div>
+      </div>
+      <%= partial "form-actions" %>
+    </fieldset>
+  </form>
 </div>
 <%= partial "sidebar" %>
 
