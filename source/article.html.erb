@@ -41,13 +41,14 @@
       <% end %>
     </div>
   </div> <!-- #article-wrap -->
-  <% 2.times do %>
-  <div class="comment-wrap">
+  <div id="comment">
     <% 2.times do %>
-    <p class="content-p"><%= lorem.paragraph %></p>
-    <% end %>
-    <pre class="prettyprint">
-      <code>
+    <div class="comment-wrap">
+      <% 2.times do %>
+      <p class="content-p"><%= lorem.paragraph %></p>
+      <% end %>
+      <pre class="prettyprint">
+        <code>
   # Quick start
   # Make sure you have installed node.js, mongoDB and npm before you run the folling commands
 
@@ -61,15 +62,16 @@
 
 
   # Now go check at http://127.0.0.1:4000 on your favorite browser to see your first coke project
-      </code>
-    </pre>
-    <div class="meta-wrap">
-      <a href="/posts/:id" class="comment-author"><%= lorem.name %></a>
-      <span class="last-reply-time"><%= lorem.date %></span>
-      <a class="comment-reply btn btn-primary" href="#reply-area" class="btn btn-primary">Reply</a>
-    </div>
-  </div> <!-- .comment-wrap -->
-  <% end %>
+        </code>
+      </pre>
+      <div class="meta-wrap">
+        <a href="/posts/:id" class="comment-author"><%= lorem.name %></a>
+        <span class="last-reply-time"><%= lorem.date %></span>
+        <a class="comment-reply btn btn-primary" href="#reply-area" class="btn btn-primary">Reply</a>
+      </div>
+    </div> <!-- .comment-wrap -->
+    <% end %>
+  </div><!-- #comment -->
   <div class="pagination article-pager">
     <ul>
       <li><a href="#">Prev</a></li>
