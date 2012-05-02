@@ -1,24 +1,26 @@
 @import "common"
 
 $code-font: "Lucida Grande"
+$article-item-padding-top: 11px
 
 #page-title
   padding: 0 0 20px
 
+#items-wrap
+  padding: 7px 0 0
+
 .article-item
   +clearfix
+  padding: $article-item-padding-top 0 11px 14px
   position: relative
-  padding: 0 0 11px 14px
   border-bottom: 1px dotted #aaa
-  margin: 0 0 12px
 
 .title-link:hover
   text-decoration: none
 
 .article-nav-list
   border-bottom: 1px solid #ddd
-  margin-left: 0
-  margin-bottom: 18px
+  margin: 0
   list-style: none
 
 .article-nav-item
@@ -41,7 +43,7 @@ $code-font: "Lucida Grande"
 
 .comment-count
   position: absolute
-  top: 0
+  top: $article-item-padding-top
   right: 0
 
 .comment-count

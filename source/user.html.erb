@@ -1,0 +1,47 @@
+<% content_for :head do %>
+  <title>Coke - Edit Your Profile</title>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag "user" %>
+  <%= stylesheet_link_tag "bootstrap" %>
+<% end %>
+
+<div class="span9">
+  <div id="posts">
+    <h2 class="block-title">Recent Post</h2>
+    <% 3.times do %>
+    <div class="article-item">
+      <h3 class="item-title"><a class="title-link" href="/article.html">請問 layout 要怎麼設計？partial 要怎麼用？</a></h3>
+      <!-- <p class="item-content"><%= lorem.sentence %></p> -->
+      <p class="item-content">請問 layout 要怎麼設計？partial 要怎麼用？</p>
+      <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+      <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+      <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+      <a href="/posts/:id" class="author"><%= lorem.name %></a>
+      <span class="last-reply-time">49mins ago</span>
+      <a class="comment-count" href="/article.html#comment">10</a>
+    </div> <!-- .article-item -->
+    <% end %>
+  </div> <!-- #recent-posts-wrap -->
+
+  <div id="replies">
+    <h2 class="block-title">Recent Post You Reply</h2>
+    <% 3.times do %>
+    <div class="article-item">
+      <h3 class="item-title"><a class="title-link" href="/article.html">請問 layout 要怎麼設計？partial 要怎麼用？</a></h3>
+      <!-- <p class="item-content"><%= lorem.sentence %></p> -->
+      <p class="item-content">請問 layout 要怎麼設計？partial 要怎麼用？</p>
+      <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+      <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+      <a href="/posts/tag?name=xxx" class="tag"><%= lorem.word %></a>
+      <a href="/posts/:id" class="author"><%= lorem.name %></a>
+      <span class="last-reply-time">49mins ago</span>
+      <a class="comment-count" href="/article.html#comment">10</a>
+    </div> <!-- .article-item -->
+    <% end %>
+  </div> <!-- #recent-reply-wrap -->
+</div>
+<%= partial "sidebar" %>
+
+<% content_for :script do %>
+  <%= javascript_include_tag "bootstrap" %>
+<% end %>
