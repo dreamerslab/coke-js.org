@@ -10,9 +10,14 @@
   <%= partial "breadcrumb" %>
   <form id="reply-area">
     <fieldset>
-      <legend>New Post</legend>
+      <legend id="new-edit-title">New Post</legend>
       <div class="control-group">
         <div class="controls">
+          <h3>Title</h3>
+          <input type="text" name="title">
+        </div>
+        <div class="controls">
+          <h3>Content</h3>
           <textarea class="input-xlarge" id="textarea" rows="10"></textarea>
         </div>
       </div>

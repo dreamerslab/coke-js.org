@@ -12,6 +12,7 @@
   <div id="article-wrap">
     <a class="reply btn btn-primary" href="#reply-area">Reply</a>
     <a class="edit btn btn-info" href="/posts-id-edit.html">Edit</a>
+    <a class="delete btn btn-danger" href="/posts-id-edit.html">Delete</a>
     <h2 id="article-title" >Post Title</h2>
     <% 3.times do %>
     <p class="content-p"><%= lorem.paragraph %></p>
@@ -68,6 +69,7 @@
         <a href="/posts/:id" class="comment-author"><%= lorem.name %></a>
         <span class="last-reply-time"><%= lorem.date %></span>
         <a class="comment-reply btn btn-primary" href="#reply-area" class="btn btn-primary">Reply</a>
+        <a class="comment-delete btn btn-danger" href="/posts-id-edit.html">Delete</a>
       </div>
     </div> <!-- .comment-wrap -->
     <% end %>
