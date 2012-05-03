@@ -1,13 +1,24 @@
 <% content_for :head do %>
-  <title>Coke - Profile</title>
+  <title>Coke - <%= lorem.name %>'s Profile</title>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "user" %>
   <%= stylesheet_link_tag "bootstrap" %>
 <% end %>
 
 <div class="span9">
+  <%= partial "breadcrumb" %>
+  <div class="well" id="profile">
+    <div id="user-profile-avatar"><img id="user-profile-avatar-img" src="<%= lorem.image('100x100') %>" alt="Avatar"></div>
+    <div id="meta">
+      <h3 id="name"><%= lorem.name %></h3>
+      <h4>Email: ooo@fake.com</h4>
+      <h4>Posts: 143</h4>
+      <h4>Comments: 256</h4>
+      <h4>Created at: <%= lorem.date %></h4>
+    </div>
+  </div>
   <div id="posts">
-    <h2 class="block-title">Recent Post</h2>
+    <h2 class="block-title">Recent Posts</h2>
     <% 3.times do %>
     <div class="article-item">
       <h3 class="item-title"><a class="title-link" href="/article.html">請問 layout 要怎麼設計？partial 要怎麼用？</a></h3>
@@ -25,7 +36,7 @@
   </div> <!-- #recent-posts-wrap -->
 
   <div id="replies">
-    <h2 class="block-title">Recent Post You Reply</h2>
+    <h2 class="block-title">Recent Posts <%= lorem.name %> Reply</h2>
     <% 3.times do %>
     <div class="article-item">
       <h3 class="item-title"><a class="title-link" href="/article.html">請問 layout 要怎麼設計？partial 要怎麼用？</a></h3>
@@ -41,20 +52,6 @@
     <% end %>
     <a class="more-link" href="/user-comments.html">more &#187</a>
   </div> <!-- #recent-reply-wrap -->
-
-  <form id="reply-area">
-    <fieldset>
-      <h2>Your New Bio</h2>
-      <div id="bio-notes">Please limit your bio to 140 characters</div>
-      <!-- <legend>Your New Bio</legend> -->
-      <div class="control-group">
-        <div class="controls">
-          <textarea class="input-xlarge" id="textarea" rows="10"></textarea>
-        </div>
-      </div>
-      <%= partial "form-actions" %>
-    </fieldset>
-  </form>
 </div>
 <%= partial "sidebar" %>
 

@@ -1,5 +1,5 @@
 <% content_for :head do %>
-  <title>Coke - Latest</title>
+  <title>Coke - Users</title>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "users" %>
   <%= stylesheet_link_tag "bootstrap" %>
@@ -11,14 +11,15 @@
     <ul class="thumbnails">
       <% 15.times do %>
       <li class="span4">
-        <div class="thumbnail user-wrap">
-          <div class="avatar-user-warp" >
-            <img class="avatar" src="http://placehold.it/80x80" alt="Avatar">
-            <h3 class="user-name"><a class="user-link" href="/user/id"><%= lorem.name %></a></h3>
+        <div class="user-wrap">
+          <div class="user-profile-avatar"><a class="user-link" href="/user.html"><img class="user-profile-avatar-img" src="<%= lorem.image('50x50') %>" alt="Avatar"></a></div>
+          <div class="meta">
+            <h3 class="user-name"><a class="user-link" href="/user.html<%= lorem.name %>"><%= lorem.name %></a></h3>
+            <h4 class="email">Email: ooo@fake.com</h4>
+            <h4 class="posts">Posts: 143</h4>
+            <h4 class="comments">Comments: 256</h4>
+            <h4 class="created">Created at: <%= lorem.date %></h4>
           </div>
-          <p>Since: <%= lorem.date %></p>
-          <p>Posts: 108 posts</p>
-          <p>Bio: <%= lorem.words 30 %></p>
         </div>
       </li>
       <% end %>
