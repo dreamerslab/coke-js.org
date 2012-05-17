@@ -44,6 +44,6 @@
 </div> <!-- #intro-wrap -->
 
 <% content_for :script do %>
-  <script src="/js/jquery-1.7.1.min.js"></script>
-  <script src="/js/index.js"></script>
+  <%= javascript_include_tag 'jquery-1.7.1.min' %>
+  <%= javascript_include_tag 'index' %>
 <% end %>
