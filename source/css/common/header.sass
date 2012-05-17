@@ -4,7 +4,7 @@ $body-font: Kefa, Merriweather, serif
 
 #logo
   @include bg_text( 200px, 120px, "logo")
-  +inline-block
+  display: block
 
 #header
   +clearfix
@@ -19,8 +19,8 @@ nav
   padding: 89px 0 0
 
 .nav-item
-  +inline-block
-  padding: 0 0 0 6px
+  +float-left
+  padding: 0 0 0 10px
 
 .nav-link
   display: block
@@ -34,6 +34,10 @@ nav
     background: #000
     color: #fff
     text-decoration: none
+
+.nav-link
+  font-weight: bold\9
+  padding: 9px\9 8px\9 5px\9 8px\9
 
 #nav-selected
   background: #000

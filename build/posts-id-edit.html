@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+      <title>Coke - Edit Post</title>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+  <link href="/css/new-edit.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/desert.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="prettyPrint()">
+    <div id="header">
+      <header>
+        <h1><a href="/index.html" id="logo">COKE - node.js MVC</a></h1>
+      </header>
+      <nav>
+        <ul>
+          <li class="nav-item"><a href="/index.html" id="nav-selected" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Demos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Docs</a></li>
+          <li class="nav-item"><a href="/posts.html" class="nav-link">Forum</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Source</a></li>
+        </ul>
+      </nav>
+    </div> <!-- #header -->
+
+    <div id="content-wrap" class="container">
+      <div class="row">
+        
+<div class="span9">
+  <!-- <ul class="breadcrumb">
+  <li>
+    <a class="crumb-link" href="/posts.html">Forum</a> <span class="divider">/</span>
+  </li>
+  <li>
+    <a class="crumb-link" href="/posts/tag?name=xxx">Tag</a> <span class="divider">/</span>
+  </li>
+  <li class="active">
+    <a class="crumb-link" href="/article.html">Post Title</a>
+  </li>
+</ul> -->
+
+<ul class="article-nav-list">
+  <li class="article-nav-item"><a class="article-nav-link" href="/posts.html">Posts</a></li>
+  <li class="article-nav-item"><a class="article-nav-link" href="/users.html">Users</a></li>
+  <li class="article-nav-item"><a class="article-nav-link" href="/tags.html">Tags</a></li>
+</ul>
+  <form id="reply-area">
+    <fieldset>
+      <legend>Edit Post</legend>
+      <div class="control-group">
+        <div class="controls">
+          <h3>Title</h3>
+          <input type="text" name="title">
+        </div>
+        <div class="controls">
+          <h3>Content</h3>
+          <textarea class="input-xlarge" id="textarea" rows="10">The original content...</textarea>
+        </div>
+      </div>
+      <label>Tags</label>
+      <input type="text" class="span3" name="tags" placeholder="Type in tags...">
+      <span class="help-inline">Separate tags with comma</span>
+      <div class="form-actions reply-actions">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button class="btn">Cancel</button>
+</div>
+    </fieldset>
+  </form>
+</div> <!-- .span9 -->
+<div class="span3">
+  <ul class="thumbnails">
+    <div class="span3">
+      <form id="search" class="form-search">
+        <input type="text" id="search-input" class="input-small search-query">
+        <button type="submit" class="btn">Search</button>
+      </form>
+    </div>
+    <li class="span3">
+      <div class="thumbnail sidebar-block">
+        <div class="caption side-profile">
+          <div id="current-user-wrap">
+            <div id="profile-avatar"><img id="profile-avatar-photo" src="http://placehold.it/50x50" alt="Avatar"></div>
+            <div id="user-notify-wrap">
+              <a id="current-profile-link" href="/user.html" id="current-user">Kyla May</a>
+              <div id="notify">
+                <i id="profile-comment" class="icon-exclamation-sign"></i>
+                <a id="notify-link" href="/notifications.html">12</a>
+                <a href="#" id="log-out" class="btn btn-inverse btn-mini">Log out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- .thumbnail -->
+      <div class="thumbnail sidebar-block">
+        <div class="caption">
+          <h4 class="sidebar-title">Hot Tags</h4>
+          <p class="sidebar-content">
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">molestias</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">saepe</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">illo</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">asperiores</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">non</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">nihil</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">fuga</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">hic</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">et</a>
+            
+            <a href="/posts-tag-name.html" class="all-tag-item tag">amet</a>
+            
+          </p>
+          <p class="sidebar-link-p"><a href="/tags.html" class="sidebar-link">All Tags &#187;</a></p>
+        </div>
+      </div> <!-- .thumbnail -->
+      <div class="thumbnail sidebar-block">
+        <div class="caption">
+          <h4 class="sidebar-title">Active Users</h4>
+          <p class="sidebar-content">
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Harvey Hardin</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Javon Puckett</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Ruby Welch</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Skylar Becker</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Kyra Kaplan</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Tomas Boswell</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Skye May</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Gretchen Pittman</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Angelo Griffin</a>
+            
+            <a href="#" class="user"><img class="avatar" src="http://placehold.it/15x15" alt="Avatar">Camila Hill</a>
+            
+          </p>
+          <p class="sidebar-link-p"><a href="/users.html" class="sidebar-link">All Users &#187;</a></p>
+        </div>
+      </div> <!-- .thumbnail -->
+      <div class="thumbnail sidebar-block">
+        <div class="caption">
+          <h4 class="sidebar-title">Issues</h4>
+          <p class="sidebar-content">
+            
+            <h4><a href="#" class="issue-title-link">Title</a></h4>
+            <p>quis ipsum sapiente</p>
+            
+            <h4><a href="#" class="issue-title-link">Title</a></h4>
+            <p>fugiat animi perferendis</p>
+            
+            <h4><a href="#" class="issue-title-link">Title</a></h4>
+            <p>officiis et alias</p>
+            
+            <h4><a href="#" class="issue-title-link">Title</a></h4>
+            <p>tenetur alias dignissimos</p>
+            
+            <h4><a href="#" class="issue-title-link">Title</a></h4>
+            <p>minima unde et</p>
+            
+          </p>
+          <p class="sidebar-link-p"><a href="#" class="sidebar-link">All Issues &#187;</a></p>
+        </div>
+      </div> <!-- .thumbnail -->
+    </li>
+  </ul>
+</div>
+
+      </div> <!-- .row -->
+    </div>
+
+    <!-- <footer>
+      Powered by <a href="/" id="sublogo">Coke</a> | Sponsored by <a href="#" id="dreamerslab">DreamersLab</a>
+    </footer> -->
+    <footer>
+      <div class="footer-text">Powered by </div>
+      <a href="/" id="sublogo">Coke</a>
+      <div class="footer-text">| Sponsored by </div>
+       <a href="http://dreamerslab.com/" id="dreamerslab">DreamersLab</a>
+    </footer>
+    <script src="/js/prettify.js" type="text/javascript"></script>
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+      <script src="/js/bootstrap.js" type="text/javascript"></script>
+
+  </body>
+</html>
