@@ -2,7 +2,7 @@
 
 # Copy this script to $HOME and run it
 
-path=/srv/www/coke-js.org
+path=/srv/www/coke
 tmp=/srv/www/tmp
 
 echo 'Cloning repo from github...'
