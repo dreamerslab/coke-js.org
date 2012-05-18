@@ -1,4 +1,4 @@
-( function ( $ ){
+( function ( $, w ){
   $( function (){
     var $a = $( 'a' );
 
@@ -15,4 +15,6 @@
       });
     }
   });
-})( jQuery );
+
+  $( w ).load( prettyPrint );
+})( jQuery, window );
